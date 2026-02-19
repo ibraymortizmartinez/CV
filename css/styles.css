@@ -1,0 +1,399 @@
+/* ===================================================================
+ * # styles.css - MODIFICADO PARA INGENIERO EN SISTEMAS
+ *
+ * -------------------------------------------------------------------
+ * Estilo adaptado para una estética moderna, elegante y tecnológica
+ * (Dark Mode Tech Theme).
+ * =================================================================== */
+
+
+/* ===================================================================
+ * # VARIABLES Y RESETEO
+ *
+ * Definimos la nueva paleta de colores tecnológica y tipografías.
+ * ------------------------------------------------------------------- */
+ :root {
+    /* -- NUEVA PALETA DE COLORES TECH -- */
+    /* Fondo principal: Azul marino muy oscuro y profundo (estilo editor de código) */
+    --color-bg-dark: #0a192f; 
+    /* Fondo secundario para tarjetas o secciones alternas */
+    --color-bg-card: #112240;
+    /* Color de acento principal: Cian eléctrico vibrante para destacar */
+    --color-accent-1: #64ffda; 
+    /* Color de acento secundario: Azul tecnológico */
+    --color-accent-2: #007bff;
+
+    /* Colores de texto */
+    /* Blanco roto para el texto principal (menos agresivo que el blanco puro) */
+    --color-text-primary: #ccd6f6;
+    /* Gris azulado para texto secundario o metadatos */
+    --color-text-secondary: #8892b0;
+    /* Color claro para textos sobre fondos de acento */
+    --color-text-light-on-accent: #0a192f;
+
+
+    /* -- TIPOGRAFÍA -- */
+    /* Fuente principal limpia y moderna */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* NUEVO: Fuente monoespaciada para habilidades técnicas (efecto código) */
+    --font-mono: 'SF Mono', 'Fira Code', 'Roboto Mono', 'Courier New', monospace;
+
+
+    /* -- OTROS -- */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --transition-smooth: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    /* Mapeo a variables antiguas para mantener compatibilidad con el HTML */
+    --color-1: var(--color-accent-1); /* Usado para botones primarios */
+    --color-2: var(--color-accent-2);
+    --color-body: var(--color-bg-dark);
+    --color-text: var(--color-text-primary);
+    --color-text-light: var(--color-text-secondary);
+    --color-text-dark: var(--color-bg-dark);
+    --color-bg-gray: var(--color-bg-card);
+    --color-border: rgba(100, 255, 218, 0.2); /* Bordes sutiles en cian */
+    --font-1: var(--font-sans);
+}
+
+/* Reseteo básico */
+html { font-size: 62.5%; box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+body {
+    background-color: var(--color-bg-dark);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    margin: 0; padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ===================================================================
+ * # TIPOGRAFÍA GLOBAL Y ELEMENTOS BASE
+ * ------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    color: var(--color-text-primary); /* Títulos más brillantes */
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-top: 0;
+}
+
+/* Títulos gigantes (Displays) */
+.text-display-title {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    /* Sutil sombra brillante para dar profundidad */
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.1);
+}
+.text-pretitle {
+    font-family: var(--font-mono); /* Pre-títulos en monoespaciado */
+    font-size: 1.4rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent-1); /* Color de acento */
+    margin-bottom: 1.2rem;
+}
+
+/* Enlaces */
+a, a:visited { color: var(--color-accent-1); text-decoration: none; transition: var(--transition-smooth); }
+a:hover, a:focus { color: var(--color-accent-1); text-decoration: underline; }
+
+/* Párrafos destacados */
+.attention-getter { font-size: 1.8rem; line-height: 1.8; color: var(--color-text-secondary); }
+
+/* Listas */
+ul { list-style: none; padding-left: 0; }
+
+
+/* ===================================================================
+ * # BOTONES (Elegantes y Tech)
+ * ------------------------------------------------------------------- */
+.btn {
+    display: inline-block;
+    font-family: var(--font-mono); /* Botones con fuente técnica */
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1.2rem 2.4rem;
+    background-color: var(--color-accent-1);
+    color: var(--color-bg-dark);
+    border: 1px solid var(--color-accent-1);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-align: center;
+}
+.btn:hover {
+    background-color: transparent;
+    color: var(--color-accent-1);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3); /* Glow effect */
+}
+.btn--stroke {
+    background-color: transparent;
+    color: var(--color-accent-1);
+}
+.btn--stroke:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--color-accent-1);
+}
+.btn--primary { background-color: var(--color-accent-1); }
+.btn--large { padding: 1.5rem 3rem; font-size: 1.5rem; }
+
+
+/* ===================================================================
+ * # HEADER Y NAVEGACIÓN (Efecto Cristal Moderno)
+ * ------------------------------------------------------------------- */
+.s-header {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+    padding: 2rem 0;
+    transition: var(--transition-smooth);
+    /* Fondo inicial transparente */
+    background: transparent;
+}
+/* Cuando se hace scroll (clase añadida por JS) */
+.s-header.sticky {
+    padding: 1rem 0;
+    /* Efecto Glassmorphism (cristal esmerilado) */
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.s-header__inner { display: flex; justify-content: space-between; align-items: center; }
+.s-header__logo .logo { 
+    color: var(--color-accent-1) !important; /* Logo en el color de acento */
+    font-weight: 800;
+}
+
+.s-header__menu-links { display: flex; margin: 0; }
+.s-header__menu-links li { margin-left: 3rem; }
+.s-header__menu-links a {
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    color: var(--color-text-primary);
+    position: relative;
+}
+.s-header__menu-links a:hover,
+.s-header__menu-links .current a {
+    color: var(--color-accent-1);
+    text-decoration: none;
+}
+/* Pequeña línea debajo del enlace activo */
+.s-header__menu-links a::before {
+    content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
+    background-color: var(--color-accent-1); transition: var(--transition-smooth);
+}
+.s-header__menu-links a:hover::before,
+.s-header__menu-links .current a::before { width: 100%; }
+
+/* Ocultar menú móvil en escritorio */
+.s-header__menu-toggle { display: none; }
+
+
+/* ===================================================================
+ * # SECCIÓN INTRO (Hero)
+ * ------------------------------------------------------------------- */
+.s-intro {
+    padding-top: 20vh; padding-bottom: 15vh;
+    display: flex; align-items: center; min-height: 100vh;
+    position: relative; overflow: hidden;
+}
+.s-intro__content-title {
+    font-size: 7rem; /* Título más grande */
+    line-height: 1.1;
+    font-weight: 800;
+    color: var(--color-text-primary);
+}
+/* Destacar el nombre */
+.s-intro__content-title br:first-child + text {
+     color: var(--color-accent-1);
+}
+
+.s-intro__content-btns { margin-top: 4rem; display: flex; gap: 2rem; }
+
+/* Ajuste de la imagen de fondo/lateral */
+.s-intro__content-media {
+    position: absolute; top: 0; right: 0; bottom: 0; width: 50%;
+    opacity: 0.3; /* Más sutil */
+    filter: grayscale(100%) contrast(120%); /* Efecto técnico monocromático */
+    z-index: -1;
+}
+.s-intro__content-media img { object-fit: cover; height: 100%; width: 100%; }
+
+/* Flecha de scroll */
+.s-intro__scroll-down {
+    position: absolute; bottom: 4rem; left: calc(50% / 16 * 1 + var(--gutter));
+    transform: translateX(-50%);
+}
+.s-intro__scroll-down a { color: var(--color-accent-1); }
+.s-intro__scroll-down .scroll-icon { animation: bounce 2s infinite; }
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+
+/* ===================================================================
+ * # SECCIÓN ABOUT Y ESTRUCTURA GENERAL
+ * ------------------------------------------------------------------- */
+.target-section { padding-top: 12rem; padding-bottom: 12rem; }
+.section-header { margin-bottom: 6rem; position: relative; }
+/* Número de sección estilo técnico */
+.section-header::before {
+    content: attr(data-num);
+    font-family: var(--font-mono);
+    font-size: 2rem; color: var(--color-accent-1); display: block; margin-bottom: 1rem;
+}
+
+/* Bloques de contenido (Experiencia, Educación) */
+.s-about__block {
+    margin-bottom: 4rem;
+    /* Diseño de tarjeta elegante */
+    background-color: var(--color-bg-card);
+    padding: 3rem;
+    border-radius: var(--border-radius-md);
+    border: 1px solid rgba(100, 255, 218, 0.1); /* Borde sutil */
+    transition: var(--transition-smooth);
+}
+.s-about__block:hover {
+    transform: translateY(-5px); /* Pequeña elevación al pasar el mouse */
+    border-color: var(--color-accent-1);
+}
+
+.s-about__block-title {
+    font-size: 2.2rem; margin-bottom: 2rem; color: var(--color-text-primary);
+    display: flex; align-items: center;
+}
+/* Pequeña línea decorativa al lado del título del bloque */
+.s-about__block-title::after {
+    content: ""; flex-grow: 1; height: 1px; background-color: var(--color-border); margin-left: 2rem;
+}
+
+/* Listas dentro de About */
+.s-about__list li {
+    margin-bottom: 1.5rem; padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: var(--color-text-primary); font-weight: 500;
+}
+.s-about__list li span { /* El rol o subtítulo */
+    display: block; font-size: 1.4rem; color: var(--color-text-secondary); margin-top: 0.4rem;
+}
+
+/* -- ESTILO ESPECIAL PARA HABILIDADES TÉCNICAS -- */
+/* Detectamos el bloque de habilidades (el tercero) para darle estilo de "Tags" de código */
+.s-about__block:nth-child(3) .s-about__list {
+    display: flex; flex-wrap: wrap; gap: 1rem; border: none;
+}
+.s-about__block:nth-child(3) .s-about__list li {
+    font-family: var(--font-mono); /* Fuente de código */
+    font-size: 1.3rem;
+    color: var(--color-accent-1);
+    background-color: rgba(100, 255, 218, 0.1); /* Fondo cian translúcido */
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius-sm);
+    border: none; margin-bottom: 0;
+}
+.s-about__block:nth-child(3) .s-about__list li:hover {
+    background-color: rgba(100, 255, 218, 0.2);
+}
+
+
+/* ===================================================================
+ * # SECCIÓN PROYECTOS (Works)
+ * ------------------------------------------------------------------- */
+.s-works { background-color: var(--color-bg-dark); } /* Mantener fondo oscuro */
+.folio-entries { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+.folio-entries .column { padding: 0 15px; margin-bottom: 30px; flex: 0 0 50%; max-width: 50%; }
+
+.entry__link {
+    display: block; position: relative; overflow: hidden;
+    border-radius: var(--border-radius-md);
+}
+.entry__thumb { position: relative; overflow: hidden; }
+.entry__thumb img {
+    width: 100%; transition: transform 0.5s ease; filter: grayscale(80%); /* Empieza en blanco y negro */
+}
+.entry__link:hover .entry__thumb img {
+    transform: scale(1.05); filter: grayscale(0%); /* Color completo al pasar mouse */
+}
+
+/* Overlay de información al pasar el mouse */
+.entry__info {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(10, 25, 47, 0.9); /* Fondo oscuro translúcido */
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    opacity: 0; transition: var(--transition-smooth); padding: 2rem; text-align: center;
+}
+.entry__link:hover .entry__info { opacity: 1; }
+
+.entry__title { color: var(--color-text-primary); font-size: 2rem; margin-bottom: 0.5rem; }
+.entry__cat { font-family: var(--font-mono); color: var(--color-accent-1); font-size: 1.4rem; }
+
+
+/* ===================================================================
+ * # FOOTER (Contacto)
+ * ------------------------------------------------------------------- */
+.s-footer { background-color: #061221; /* Un tono aún más oscuro para el final */ padding-bottom: 8rem; }
+.s-footer__content { margin-bottom: 6rem; }
+.s-footer h5 { color: var(--color-text-primary); font-size: 1.6rem; margin-bottom: 2rem; }
+.link-list li { margin-bottom: 1.5rem; }
+.link-list a {
+    color: var(--color-text-secondary); display: inline-block; position: relative;
+}
+.link-list a:hover { color: var(--color-accent-1); text-decoration: none; transform: translateX(5px); }
+
+.s-footer__bottom {
+    border-top: 1px solid rgba(255,255,255,0.1); padding-top: 4rem; margin-top: 6rem;
+    text-align: center; font-size: 1.4rem; color: var(--color-text-secondary);
+}
+.ss-go-top {
+    position: fixed; bottom: 3rem; right: 3rem; z-index: 100; opacity: 0; visibility: hidden; transition: var(--transition-smooth);
+}
+.ss-go-top.link-is-visible { opacity: 1; visibility: visible; }
+.ss-go-top a {
+    display: flex; align-items: center; justify-content: center;
+    width: 5rem; height: 5rem; background-color: var(--color-accent-1); color: var(--color-bg-dark);
+    border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.ss-go-top a:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(100, 255, 218, 0.4); }
+.ss-go-top svg { fill: currentColor; width: 24px; height: 24px; }
+.u-screen-reader-text { display: none; }
+
+
+/* ===================================================================
+ * # MEDIA QUERIES (Responsividad básica)
+ * ------------------------------------------------------------------- */
+@media screen and (max-width: 1200px) { .text-display-title { font-size: 4.5rem; } .s-intro__content-title { font-size: 6rem; }}
+@media screen and (max-width: 900px) {
+    .s-header__menu-toggle { display: block; } .s-header__nav { display: none; } /* Simplificación para móvil */
+    .s-intro__content-media { display: none; } /* Ocultar imagen lateral en tablets */
+    .s-intro__content-inner { flex: 0 0 100%; max-width: 100%; text-align: center; }
+    .s-intro__content-btns { justify-content: center; }
+    .folio-entries .column { flex: 0 0 100%; max-width: 100%; } /* Proyectos en 1 columna */
+}
+@media screen and (max-width: 600px) {
+    .text-display-title { font-size: 3.5rem; } .s-intro__content-title { font-size: 4rem; }
+    .target-section { padding-top: 8rem; padding-bottom: 8rem; }
+}
+
+/* ===================================================================
+ * # UTILIDADES DE CUADRÍCULA (Grid System simplificado)
+ * ------------------------------------------------------------------- */
+.row { width: 92%; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; }
+.column { display: block; flex: 1 1 0%; padding: 0 15px; }
+.xl-12 { flex: 0 0 100%; max-width: 100%; }
+.xl-6 { flex: 0 0 50%; max-width: 50%; }
+.xl-4 { flex: 0 0 33.333%; max-width: 33.333%; }
+.lg-12 { flex: 0 0 100%; max-width: 100%; }
+[class*="grid-block"] { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+.grid-list-items__item { flex: 0 0 33.333%; max-width: 33.333%; padding: 0 15px; }
+@media screen and (max-width: 900px) { .grid-list-items__item { flex: 0 0 100%; max-width: 100%; margin-bottom: 3rem; } .xl-6, .xl-4 { flex: 0 0 100%; max-width: 100%; margin-bottom: 3rem; }}
