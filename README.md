@@ -38,11 +38,6 @@ Soy un estudiante apasionado por la tecnología en el **Instituto Tecnológico d
 
 ---
 
-## 📊 Estadísticas de GitHub
-![Estadísticas de Angel](https://github-readme-stats.vercel.app/api?username=ibraymortizmartinez&show_icons=true&theme=tokyonight)
-
----
-
 ## 📬 Contacto
 ¿Tienes algún proyecto en mente o te gustaría colaborar? ¡Hablemos!
 
