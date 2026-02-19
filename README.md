@@ -10,7 +10,7 @@
 ---
 
 ## 🚀 Sobre Mí
-Soy un estudiante apasionado por la tecnología en el **Instituto Tecnológico de Pachuca**. Mi enfoque está en el desarrollo de soluciones eficientes y el aprendizaje constante de infraestructuras modernas. Me considero un aprendiz rápido, con una sólida ética de trabajo desarrollada a través de mis experiencias académicas y laborales.
+Soy un estudiante apasionado por la tecnología en el **Instituto Tecnológico de Pachuca**. Mi enfoque está en el desarrollo de soluciones eficientes y el aprendizaje constante de infraestructuras modernas. Me considero un aprendiz rápido, con una sólida ética de trabajo desarrollada a través de mis experiencias académicas y laborales,siempre buscando aprender.
 
 - 🎓 Actualmente cursando la Ingeniería en Sistemas Computacionales.
 - ☁️ Especial interés en arquitectura Cloud y servicios de AWS.
