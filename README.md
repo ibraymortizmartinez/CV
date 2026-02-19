@@ -14,7 +14,7 @@ Soy un estudiante apasionado por la tecnología en el **Instituto Tecnológico d
 
 - 🎓 Actualmente cursando la Ingeniería en Sistemas Computacionales.
 - ☁️ Especial interés en arquitectura Cloud y servicios de AWS.
-- 🛠️ Enfocado en perfeccionar mis habilidades en desarrollo Full Stack.
+- 🛠️ Enfocado en perfeccionar mis habilidades en la tecnologia.
 
 ---
 
